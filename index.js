@@ -14,7 +14,20 @@ const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS;
 
 // TODO: ROUTE 1 - Create a new app.get route for the homepage to call your custom object data. Pass this data along to the front-end and create a new pug template in the views folder.
 
-// * Code for Route 1 goes here
+app.get('/', async(req,res) => {
+    //Add url 
+    const p_culinary_discoveries = 'https://api.hubapi.com/crm/v3/objects/p_culinary_discoveries/?properties=name,origin,star_ingredients'
+    //Headers
+    const headers = {
+        Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+        'Content-Type': 'application/json'
+    }
+    try {
+        //get inforation
+    } catch (error) {
+        
+    }
+})
 
 // TODO: ROUTE 2 - Create a new app.get route for the form to create or update new custom object data. Send this data along in the next route.
 
