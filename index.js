@@ -24,8 +24,12 @@ app.get('/', async(req,res) => {
     }
     try {
         //get inforation
+        const response = await axios.get(p_culinary_discoveries, { headers });
+        const data = response.data.results;
+        //render data
+        res.render('homepage', { title: 'Home | Integrating With HubSpot I Practicum',  p_culinary_discoveries: data});
     } catch (error) {
-        
+        console.error(error);
     }
 })
 
