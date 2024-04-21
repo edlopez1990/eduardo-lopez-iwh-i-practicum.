@@ -16,7 +16,7 @@ const PRIVATE_APP_ACCESS = process.env.PRIVATE_APP_ACCESS;
 
 app.get('/', async(req,res) => {
     //Add url 
-    const p_culinary_discoveries = 'https://api.hubapi.com/crm/v3/objects/p_culinary_discoveries/?properties=name,origin,star_ingredients'
+    const p_culinary_discoveries_url = 'https://api.hubapi.com/crm/v3/objects/p_culinary_discoveries/?properties=name,origin,star_ingredients'
     //Headers
     const headers = {
         Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
@@ -24,7 +24,7 @@ app.get('/', async(req,res) => {
     }
     try {
         //get inforation
-        const response = await axios.get(p_culinary_discoveries, { headers });
+        const response = await axios.get(p_culinary_discoveries_url, { headers });
         const data = response.data.results;
         //render data
         res.render('homepage', { title: 'Home | Integrating With HubSpot I Practicum',  p_culinary_discoveries: data});
