@@ -16,7 +16,7 @@ const PRIVATE_APP_ACCESS = process.env.API_KEY;
 
 app.get('/', async(req,res) => {
     //Add url 
-    const p_culinary_discoveries_url = 'https://api.hubapi.com/crm/v3/objects/p_culinary_discoveries/?properties=name,origin,star_ingredients'
+    const p_culinary_discoveries_url = 'https://api.hubapi.com/crm/v3/objects/p_culinary_discovery/?properties=name,origin,star_ingredients'
     //Headers
     const headers = {
         Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
@@ -60,7 +60,7 @@ app.post('/update-cobj', async (req,res) => {
         'Content-Type': 'application/json'
     }
     //Url Update
-    const url ="https://api.hubapi.com/crm/v3/objects/p_culinary_discoveries/";
+    const url ="https://api.hubapi.com/crm/v3/objects/p_culinary_discovery/";
     //Update information
     try {
         await axios.post(url, properties, { headers })
