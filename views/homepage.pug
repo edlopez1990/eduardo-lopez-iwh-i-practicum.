@@ -6,7 +6,8 @@ head
     link(rel="stylesheet", href="/css/style.css")
 body 
     div.container 
-            table(style='background-color:#fff; width:100%; padding: 15px;margin: 20px auto;').card
+            h1 Home
+            table(style='background-color:#fff; width:80%; padding: 15px;margin: 20px auto;').card
                 tr(align='center' style='margin: 10px 15px; text-align: center; vertical-align: middle;')
                     th(style="text-align: center; padding-bottom: 15px; font-size: 16px;")
                         p Name
@@ -19,3 +20,5 @@ body
                         td(style="padding-bottom: 10px;") #{p_culinary_discoverie.properties.name}
                         td(style="padding-bottom: 10px;") #{p_culinary_discoverie.properties.origin}
                         td(style="padding-bottom: 10px;") #{p_culinary_discoverie.properties.star_ingredients}
+    div.button_section
+        a(href="http://localhost:3000/update-cobj") Add/Update New Culinary Discoverie

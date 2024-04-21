@@ -1,0 +1,22 @@
+html(lang="en")
+head
+    title= `${title}`
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/css/style.css")
+body 
+    div.container 
+        div.addNewRegistered
+            h1 Create a new Custom Object
+            form(method="POST").center.card
+                
+                label(for="newName") Name:
+                input(type="text" name="newName" required placeholder="Required")
+                label(for="origin") Origin
+                input(type="text" name="origin" required placeholder="Required")
+                label(for="starIngredients") Star Ingredients
+                input(type="text" name="starIngredients" required placeholder="Required")
+
+                input(type="submit" value="Submit")
+    div.button_section 
+        h3 Return to the homepage
+        a(href="/") Return 
